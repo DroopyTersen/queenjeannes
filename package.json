@@ -16,8 +16,9 @@
   },
   "author": "Andrew Petersen",
   "dependencies": {
-    "react": "npm:@pika/react",
-    "react-dom": "npm:@pika/react-dom"
+    "prismic-javascript": "^2.7.0",
+    "react": "npm:@pika/react@^16.13.1",
+    "react-dom": "npm:@pika/react-dom@^16.13.1"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
@@ -26,5 +27,12 @@
     "rimraf": "^3.0.2",
     "snowpack": "^1.6.0",
     "typescript": "^3.8.3"
+  },
+  "snowpack": {
+    "webDependencies": [
+      "prismic-javascript",
+      "react",
+      "react-dom"
+    ]
   }
 }
