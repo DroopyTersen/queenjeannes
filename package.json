@@ -12,7 +12,8 @@
     "build": "npm run tsc && npm run sass",
     "serve": "live-server",
     "prestart": "npm run clean && npm run sass",
-    "start": "concurrently \"npm run sass:watch\" \"npm run tsc:watch\" \"npm run serve\""
+    "start": "concurrently \"npm run sass:watch\" \"npm run tsc:watch\" \"npm run serve\"",
+    "codegen": "powershell tasks/codegen.ps1"
   },
   "author": "Andrew Petersen",
   "dependencies": {
@@ -22,6 +23,8 @@
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
+    "graphql": "^14.6.0",
+    "isomorphic-fetch": "^2.2.1",
     "live-server": "^1.2.1",
     "node-sass": "^4.13.1",
     "rimraf": "^3.0.2",

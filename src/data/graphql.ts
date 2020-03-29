@@ -38,7 +38,7 @@ export interface QueryState<T> {
   error?: any;
 }
 export const useQuery = function<T>(query) {
-  let [state, setState] = useState<QueryState<T>>({ data: null });
+  let [state, setState] = useState({ data: null });
 
   useEffect(() => {
     let isMounted = true;
@@ -50,5 +50,5 @@ export const useQuery = function<T>(query) {
     doAsync();
     return () => (isMounted = false);
   }, [query]);
-  return state;
+  return state as QueryState<T>;
 };
