@@ -9,7 +9,7 @@
     "sass:watch": "node-sass --watch src/styles/global.scss lib/styles/global.css",
     "tsc": "tsc",
     "tsc:watch": "tsc --watch",
-    "build": "npm run tsc && npm run sass",
+    "build": "snowpack --optimize && npm run tsc && npm run sass",
     "serve": "live-server",
     "prestart": "npm run clean && npm run sass",
     "start": "concurrently \"npm run sass:watch\" \"npm run tsc:watch\" \"npm run serve\"",
