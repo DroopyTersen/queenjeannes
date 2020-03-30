@@ -2,3 +2,6 @@ node_modules
 dist
 web_modules
 lib
+
+# Local Netlify folder
+.netlify

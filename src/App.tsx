@@ -5,7 +5,10 @@ function App({}) {
 	return (
 		<div className="app">
 			<Header />
-			<h1>App Updated!</h1>
+			<div style={{ textAlign: "center", marginTop: "40px" }}>
+				<h1>Coming Soon!</h1>
+				<h4>Queen Jeanne's Gluten Free Bakery</h4>
+			</div>
 		</div>
 	);
 }
