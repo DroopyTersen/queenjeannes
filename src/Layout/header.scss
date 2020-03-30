@@ -8,12 +8,25 @@ header.header {
 
 	justify-content: space-between;
 	position: relative;
-	.logo {
-		padding: 5px 20px;
-		font-size: 3rem;
-		color: var(--primary);
+	.logo-title {
+		font-size: 2rem;
+		letter-spacing: 2px;
+		display: none;
 	}
-
+	.logo {
+		font-size: 3rem;
+		background: var(--primary-400);
+		color: var(--white);
+		display: flex;
+		align-items: center;
+		padding: 5px 20px 5px 20px;
+		a {
+			color: var(--white);
+		}
+		h1 {
+			margin: 0;
+		}
+	}
 	.menu-trigger {
 		display: flex;
 		justify-content: flex-end;
@@ -23,8 +36,18 @@ header.header {
 			padding: 5px 20px;
 		}
 	}
+	// nav a {
+	// 	color: var(--dark-300);
+	// 	&:hover {
+	// 		color: var(--primary);
+	// 	}
+	// }
 	// Larger than tablet
 	@media (min-width: $tablet) {
+		.logo .logo-title {
+			display: inline-block;
+			margin-left: 20px;
+		}
 		nav {
 			padding: 10px 20px;
 			display: flex;
@@ -61,6 +84,9 @@ header.header {
 			right: 0;
 			top: 0;
 			bottom: 0;
+			.logo-title {
+				display: block;
+			}
 		}
 		.nav-item {
 			padding: 10px;

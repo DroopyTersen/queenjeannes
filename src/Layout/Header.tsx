@@ -13,7 +13,10 @@ function Header({}) {
 	return (
 		<header className="header">
 			<div className="logo">
-				<i className="fas fa-crown" />
+				<a href="/">
+					<i className="fas fa-crown" />
+				</a>
+				<h1 className="logo-title">Queen Jeanne's Bakery</h1>
 			</div>
 
 			<div className="menu-trigger">
@@ -23,6 +26,8 @@ function Header({}) {
 				</button>
 			</div>
 			<nav className={isMenuOpen ? "open" : "closed"}>
+				<h1 className="logo-title">Queen Jeanne's Bakery</h1>
+
 				{menuLinks &&
 					menuLinks.map(link => (
 						<a className="nav-item" href={link.path}>
