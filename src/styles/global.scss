@@ -32,10 +32,15 @@
 	--neutral-700: #b5b4af;
 	--textFont: Roboto, sans-serif;
 	--titleFont: "Playfair Display", "Times New Roman";
+
+	--mobile: 40rem;
+	--tablet: 600px;
+	--desktop: 120rem;
 }
+@import "./milligram";
 
 body {
-	background: radial-gradient(var(--white) 20%, var(--neutral-200));
+	background: radial-gradient(var(--white-100), var(--white));
 	width: 100vw;
 	height: 100vh;
 	color: var(--dark);
@@ -48,4 +53,8 @@ body {
 	h6 {
 		font-family: var(--titleFont);
 	}
+	button i {
+		font-size: 2rem;
+	}
 }
+@import "../Layout/header";
