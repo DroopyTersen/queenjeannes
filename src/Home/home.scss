@@ -55,7 +55,7 @@ $desktop: 120rem;
 }
 @media (max-width: 1000px) {
   .content {
-    margin-top: 50px;
+    // margin-top: 50px;
   }
   .hero-caption {
     width: 100%;
@@ -72,6 +72,9 @@ $desktop: 120rem;
     .subtitle {
       position: initial;
     }
+  }
+  .tagline {
+    font-size: 1.85rem;
   }
 }
 @media (min-width: $mobile) {
