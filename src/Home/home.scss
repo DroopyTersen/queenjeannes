@@ -1,0 +1,30 @@
+$mobile: 40rem;
+$tablet: 80rem;
+$desktop: 120rem;
+.content {
+  margin-top: 30px;
+}
+.hero-image {
+  max-width: 100%;
+  height: 300px;
+  background-size: cover;
+  opacity: 0.8;
+}
+// Larger than tablet
+@media (min-width: $mobile) {
+  .hero-image {
+    height: 400px;
+  }
+}
+@media (min-width: $tablet) {
+  .hero-image {
+    height: 600px;
+  }
+}
+
+// // Larger than mobile
+// @media (min-width: $tablet) {
+//   .hero {
+//     height: 400px;
+//   }
+// }
