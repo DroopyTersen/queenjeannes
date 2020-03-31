@@ -30,7 +30,8 @@
   --neutral: #dddbd5;
   --neutral-600: #c9c8c2;
   --neutral-700: #b5b4af;
-  --textFont: Roboto, sans-serif;
+  // --textFont: Roboto, sans-serif;
+  --textFont: "Questrial", sans-serif;
   --titleFont: "Playfair Display", "Times New Roman";
 
   --mobile: 40rem;
@@ -57,6 +58,12 @@ body {
   }
   button i {
     font-size: 2rem;
+  }
+  a {
+    color: var(--primary);
+    &:hover {
+      color: var(--secondary);
+    }
   }
 }
 @import "../Layout/header";

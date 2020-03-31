@@ -15,7 +15,8 @@ export default function useHomepage() {
 
   return {
     banner: data.homepage.banner.url,
-    tagline: data.homepage.tagline.text,
+    bannerMobile: data.homepage.banner.mobile.url,
+    tagline: data.homepage.tagline[0].text,
     callsToAction,
   };
 }

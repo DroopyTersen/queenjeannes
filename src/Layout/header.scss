@@ -3,6 +3,7 @@ $tablet: 80rem;
 $desktop: 120rem;
 
 header.header {
+  height: 50px;
   display: flex;
   align-items: center;
 
@@ -12,15 +13,16 @@ header.header {
   top: 0;
   right: 0;
   left: 0;
-  background: var(--white);
-  box-shadow: 1px -10px 37px rgba(0, 0, 0, 0.24);
+  background: #f1f1eedb;
+  box-shadow: 1px -10px 37px rgba(0, 0, 0, 0.11);
   .logo-title {
     font-size: 2rem;
     letter-spacing: 2px;
     display: none;
   }
   .logo {
-    font-size: 3rem;
+    height: 100%;
+    // font-size: 2.5rem;
     background: var(--primary-400);
     color: var(--white);
     display: flex;
@@ -32,6 +34,10 @@ header.header {
     h1 {
       margin: 0;
     }
+  }
+  .nav-item {
+    letter-spacing: 2px;
+    font-size: 1.4rem;
   }
   .menu-trigger {
     display: flex;
@@ -94,6 +100,8 @@ header.header {
       bottom: 0;
       .logo-title {
         display: block;
+        color: var(--primary);
+        // font-family: var(--textFont);
       }
     }
     .nav-item {
