@@ -42,7 +42,7 @@ function Header({}) {
 export default React.memo(Header);
 
 function useNavigation() {
-  console.log("useNavigation -> NAVIGATION_QUERY", NAVIGATION_QUERY);
+  // console.log("useNavigation -> NAVIGATION_QUERY", NAVIGATION_QUERY);
   let { data } = useQuery<NavigationData>(NAVIGATION_QUERY);
 
   if (!data) return {};

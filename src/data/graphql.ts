@@ -17,12 +17,9 @@ let waitForRef = (async () => {
   }
 })();
 
-export const gql = (str) => {
-  console.log("gql -> str", str);
-  return str[0];
-};
+export const gql = (str) => str[0];
 
-let request = async function(query, queryOptions = {}) {
+let request = async function (query, queryOptions = {}) {
   console.log("request.query", query);
   let url = GRAPHQL_ENDPOINT + "?query=" + encodeURIComponent(query);
   await waitForRef;
@@ -47,7 +44,7 @@ const EMPTY_STATE: QueryState<any> = {
   data: null,
   error: null,
 };
-export const useQuery = function<T>(query) {
+export const useQuery = function <T>(query) {
   let [state, setState] = useState(() => {
     return query ? cache.get(query) || EMPTY_STATE : EMPTY_STATE;
   });
