@@ -23,7 +23,11 @@ export default function HomeScreen() {
       </div>
       <p className="tagline">{tagline}</p>
       {/* <CallsToAction items={callsToAction} /> */}
-      <BakedGoods items={bakedGoods.items} description={bakedGoods.description} />
+      <BakedGoods
+        items={bakedGoods.items}
+        description={bakedGoods.description}
+        isMobile={isMobile}
+      />
     </div>
   );
 }
@@ -31,31 +35,51 @@ export default function HomeScreen() {
 function CallsToAction({ items }: { items: CallToAction[] }) {
   return <div className="calls-to-actions"></div>;
 }
-function BakedGoods({ items, description = "" }: { items: BakedGood[]; description: string }) {
+function BakedGoods({
+  items,
+  description = "",
+  isMobile = false,
+}: {
+  items: BakedGood[];
+  description: string;
+  isMobile: boolean;
+}) {
   return (
     <div className="baked-goods">
       <h1>Baked Goods</h1>
       <p>{description}</p>
       <div className="baked-goods-list">
-        {items.map((bakedGood, index) => (
-          <div className="baked-good">
-            {index % 2 === 0 && (
-              <div className="baked-good-info">
+        {items.map((bakedGood, index) => {
+          if (isMobile)
+            return (
+              <div className="baked-good baked-good-info">
                 <h2>{bakedGood.title}</h2>
-                <button type="button">Gallery</button>
+                <img src={bakedGood.images[0]} />
+                <img src={bakedGood.images[1]} />
+                <div className="baked-good-cta">
+                  <button type="button">See More</button>
+                </div>
               </div>
-            )}
-            <img src={bakedGood.images[0]} />
-            <img src={bakedGood.images[1]} />
-            {index % 2 === 1 && (
-              <div className="baked-good-info">
-                <h2>{bakedGood.title}</h2>
-                <button type="button">Gallery</button>
-              </div>
-            )}
-          </div>
-        ))}
+            );
+          return (
+            <div className="baked-good">
+              {index % 2 === 0 && <BakedGoodInfo title={bakedGood.title} />}
+              <img src={bakedGood.images[0]} />
+              <img src={bakedGood.images[1]} />
+              {index % 2 === 1 && <BakedGoodInfo title={bakedGood.title} />}
+            </div>
+          );
+        })}
       </div>
+    </div>
+  );
+}
+
+function BakedGoodInfo({ title }) {
+  return (
+    <div className="baked-good-info">
+      <h2>{title}</h2>
+      <button type="button">See More</button>
     </div>
   );
 }
