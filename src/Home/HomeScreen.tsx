@@ -46,7 +46,7 @@ function BakedGoods({
 }) {
   return (
     <div className="baked-goods">
-      <h1>Baked Goods</h1>
+      <h1 id="baked-goods">Baked Goods</h1>
       <p>{description}</p>
       <div className="baked-goods-list">
         {items.map((bakedGood, index) => {
