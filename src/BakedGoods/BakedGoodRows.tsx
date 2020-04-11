@@ -44,7 +44,9 @@ function BakedGoodInfo({ title }) {
   return (
     <div className="baked-good-info">
       <h2>{title}</h2>
-      <button type="button">See More</button>
+      <button type="button" onClick={() => alert("Coming soon!")}>
+        See More
+      </button>
     </div>
   );
 }
