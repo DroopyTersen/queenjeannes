@@ -9,7 +9,7 @@ export default function ContactForm(props: ContactFormProps) {
   };
   return (
     <div className="form-wrapper link-target" id="order-form">
-      <form className="form" name="contact-order" data-netlify="true" onSubmit={handleSubmit}>
+      <form className="form" name="contact-order" data-netlify="true">
         <h2 className="form__title">{props.title}</h2>
         <p>
           Let me know what you need and I can work with you! I have substitutes for most allergens.
