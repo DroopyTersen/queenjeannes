@@ -46,7 +46,7 @@ let shouldBustCache = function (cbKey: string) {
 
 export const getCache = (cacheOpts: CacheOptions | string) => {
   let opts = getOptions(cacheOpts);
-  if (shouldBustCache(opts.cacheBustKey)) return null;
+  if (true || shouldBustCache(opts.cacheBustKey)) return null;
   let { location } = opts;
   if (!opts.key && !opts.getCacheKey) throw new Error("key is required");
 

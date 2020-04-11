@@ -20,7 +20,9 @@ export default function BakedGoodRows({ isMobile = false }: { isMobile: boolean 
                 <img src={bakedGood.images[0]} />
                 <img src={bakedGood.images[1]} />
                 <div className="baked-good-cta">
-                  <button type="button">See More</button>
+                  <button type="button" onClick={() => alert("Coming soon!")}>
+                    See More
+                  </button>
                 </div>
               </div>
             );
