@@ -23,7 +23,24 @@ export default function HomeScreen() {
           <div className="subtitle">- Gluten Free Bakery -</div>
         </div>
       </div>
-      <p className="tagline">{tagline}</p>
+      {isMobile && <p className="tagline">{tagline}</p>}
+      <div className="cta__wrapper">
+        <div className="cta">
+          {!isMobile && <p className="tagline">{tagline}</p>}
+          <p>
+            I want options for as many people as possible. That’s my vision, and that’s where we’re
+            starting!
+          </p>
+          <div>
+            <button
+              onClick={() => document.getElementById("order-form").scrollIntoView()}
+              className="button"
+            >
+              Request an Order
+            </button>
+          </div>
+        </div>
+      </div>
       <BakedGoodRows isMobile={isMobile} />
       <ContactForm title="Request an Order" />
       <hr />
