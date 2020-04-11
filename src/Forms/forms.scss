@@ -1,0 +1,41 @@
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px 50px 20px;
+}
+
+form.form {
+  width: 800px;
+  padding: 20px;
+  max-width: 100%;
+  background: var(--neutral);
+  p {
+    letter-spacing: 0.6px;
+  }
+  .form__title {
+    color: var(--dark-300);
+  }
+  input,
+  textarea {
+    width: 100%;
+    resize: vertical;
+    background: var(--white);
+  }
+
+  label {
+    font-family: var(--titleFont);
+    font-weight: normal;
+  }
+  textarea {
+    min-height: 100px;
+  }
+  .form__actions {
+    display: flex;
+    justify-content: center;
+    button {
+      min-width: 250px;
+      letter-spacing: 3px;
+    }
+  }
+}

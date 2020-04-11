@@ -76,7 +76,19 @@ hr {
   border-top: 0.1rem solid var(--neutral-300);
   margin: 3rem 40%;
 }
+
+@media (max-width: 1000px) {
+  body .link-target {
+    padding-top: 50px;
+  }
+}
+@media (min-width: 1000px) {
+  body .link-target {
+    padding-top: 100px;
+  }
+}
 @import "../Layout/header";
 @import "../Home/home";
 @import "../BakedGoods/BakedGoodsRows";
 @import "../AboutUs/AboutUs";
+@import "../Forms/forms";

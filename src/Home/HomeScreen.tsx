@@ -3,6 +3,7 @@ import useHomepage, { CallToAction } from "./useHome.js";
 import useWindowSize from "../hooks/useWindowSize.js";
 import BakedGoodRows from "../BakedGoods/BakedGoodRows.js";
 import AboutUs from "../AboutUs/AboutUs.js";
+import ContactForm from "../Forms/ContactForm.js";
 
 export default function HomeScreen() {
   let { banner, bannerMobile, tagline, callsToAction } = useHomepage();
@@ -24,6 +25,7 @@ export default function HomeScreen() {
       </div>
       <p className="tagline">{tagline}</p>
       <BakedGoodRows isMobile={isMobile} />
+      <ContactForm title="Request an Order" />
       <hr />
       <AboutUs />
       {/* <CallsToAction items={callsToAction} /> */}

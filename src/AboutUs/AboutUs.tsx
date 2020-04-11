@@ -2,13 +2,14 @@ import React from "/web_modules/react.js";
 import { gql, useQuery } from "../data/graphql.js";
 import { AboutUsData } from "./_types/AboutUsData.js";
 import Prismic from "/web_modules/prismic-reactjs.js";
-console.log("Prismic", Prismic);
 
 export default function AboutUs() {
   let { title, content, blurb, banner } = useAboutUs();
   return (
     <div className="about-us">
-      <h1 id="about-us">{title}</h1>
+      <h1 className="link-target" id="about-us">
+        {title}
+      </h1>
       <div className="about-us__banner">
         <img src={banner} />
       </div>

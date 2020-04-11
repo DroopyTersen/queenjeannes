@@ -7,7 +7,9 @@ export default function BakedGoodRows({ isMobile = false }: { isMobile: boolean 
   if (!bakedGoods) return null;
   return (
     <div className="baked-goods">
-      <h1 id="baked-goods">Baked Goods</h1>
+      <h1 className="link-target" id="baked-goods">
+        Baked Goods
+      </h1>
       <p>{bakedGoods.description}</p>
       <div className="baked-goods-list">
         {bakedGoods.items.map((bakedGood, index) => {

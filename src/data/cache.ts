@@ -8,7 +8,7 @@ export interface CacheOptions {
 }
 
 let defaultConfig: CacheOptions = {
-  duration: 1000 * 60 * 60 * 15 /* 12 hrs */,
+  duration: 1000 * 60,
   location: sessionStorage,
   cacheBustKey: "bustcache", // bustcache=true or bustcache=true
 };
@@ -17,7 +17,7 @@ let _isExpired = (cacheValue) => {
   return cacheValue.expiration && Date.now() > cacheValue.expiration;
 };
 
-let getOptions = function(cacheOpts: CacheOptions | string): CacheOptions {
+let getOptions = function (cacheOpts: CacheOptions | string): CacheOptions {
   if (typeof cacheOpts === "string") {
     cacheOpts = {
       key: cacheOpts as string,
@@ -31,7 +31,7 @@ let getOptions = function(cacheOpts: CacheOptions | string): CacheOptions {
  *  Note: Currently only look for presence of key, doesn't care what value is
  *  So 'bustcache=false' would actually flag as true in "shouldBustCache"
  */
-let shouldBustCache = function(cbKey: string) {
+let shouldBustCache = function (cbKey: string) {
   cbKey = cbKey.toLowerCase();
   try {
     if (window.location.search) {
@@ -72,7 +72,7 @@ export const setCache = (cacheOpts: CacheOptions | string, payload: any) => {
   return getCache(opts);
 };
 
-export const cachify = function(asyncFn: any, cacheConfig: CacheOptions, context: any = this) {
+export const cachify = function (asyncFn: any, cacheConfig: CacheOptions, context: any = this) {
   if (!asyncFn || typeof asyncFn !== "function") {
     throw new Error("Cachify Error: You must pass an async function as the first param");
   }
@@ -81,7 +81,7 @@ export const cachify = function(asyncFn: any, cacheConfig: CacheOptions, context
       "Cachify Error: You must pass a cacheConfig object with a 'key' or 'getCacheKey', Ex: cachify(fetchUsers, { key: 'myapp-users' }"
     );
   }
-  return async function(...args) {
+  return async function (...args) {
     let cacheOptions = { ...cacheConfig };
     // Allow figuring out cache key at runtime using the args provided to the wrapped async function
     if (!cacheOptions.key) {
