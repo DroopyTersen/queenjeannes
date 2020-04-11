@@ -17,6 +17,7 @@
   },
   "author": "Andrew Petersen",
   "dependencies": {
+    "@reach/router": "^1.3.3",
     "prismic-reactjs": "^1.3.0",
     "react": "npm:@pika/react@^16.13.1",
     "react-dom": "npm:@pika/react-dom@^16.13.1"
