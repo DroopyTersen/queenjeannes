@@ -1,16 +1,11 @@
 import React from "/web_modules/react.js";
 
 export default function ContactForm(props: ContactFormProps) {
-  const handleSubmit = (e) => {
-    if (window.location.href.toLowerCase().indexOf("queenjeannes") < 0) {
-      e.preventDefault();
-      console.log("Skipping form submission", e.target);
-    }
-  };
   return (
     <div className="form-wrapper link-target" id="order-form">
-      <form className="form" name="contact-order" data-netlify="true">
+      <form className="form" name="contact" method="post">
         <h2 className="form__title">{props.title}</h2>
+        <input type="hidden" name="form-name" value="contact" />
         <p>
           Let me know what you need and I can work with you! I have substitutes for most allergens.
         </p>
@@ -35,7 +30,7 @@ export default function ContactForm(props: ContactFormProps) {
           />
         </div>
         <div className="form__control">
-          <textarea defaultValue={props.body} />
+          <textarea name="message" defaultValue={props.body} />
         </div>
         <div className="form__actions">
           <button type="submit">Submit</button>
