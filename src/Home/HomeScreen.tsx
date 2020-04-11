@@ -2,6 +2,7 @@ import React from "/web_modules/react.js";
 import useHomepage, { CallToAction } from "./useHome.js";
 import useWindowSize from "../hooks/useWindowSize.js";
 import BakedGoodRows from "../BakedGoods/BakedGoodRows.js";
+import AboutUs from "../AboutUs/AboutUs.js";
 
 export default function HomeScreen() {
   let { banner, bannerMobile, tagline, callsToAction } = useHomepage();
@@ -23,6 +24,8 @@ export default function HomeScreen() {
       </div>
       <p className="tagline">{tagline}</p>
       <BakedGoodRows isMobile={isMobile} />
+      <hr />
+      <AboutUs />
       {/* <CallsToAction items={callsToAction} /> */}
     </div>
   );

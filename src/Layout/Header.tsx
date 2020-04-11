@@ -30,7 +30,7 @@ function Header({}) {
 
         {menuLinks &&
           menuLinks.map((link) => (
-            <a className="nav-item" href={link.path}>
+            <a className="nav-item" href={link.path} onClick={() => setIsMenuOpen(false)}>
               {link.label}
             </a>
           ))}

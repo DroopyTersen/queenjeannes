@@ -71,6 +71,12 @@ button {
   background-color: var(--secondary);
   border-color: var(--secondary-400);
 }
+hr {
+  border: 0;
+  border-top: 0.1rem solid var(--neutral-300);
+  margin: 3rem 40%;
+}
 @import "../Layout/header";
 @import "../Home/home";
 @import "../BakedGoods/BakedGoodsRows";
+@import "../AboutUs/AboutUs";
